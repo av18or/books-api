@@ -1,10 +1,12 @@
-// Require Express: 
+// Require Express and Mongoose: 
 const express = require('express');
-
+const mongoose = require('mongoose');
 // Initiate the app variable: 
 const app = express();
 
 
+//middleware
+app.use(express.json());
 
 //Basic Express server.
 // root index route with some text
