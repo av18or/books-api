@@ -1,4 +1,5 @@
-// Require Express and Mongoose: 
+// Require Express, Mongoose, and dotenv: 
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 // Initiate the app variable: 
@@ -12,12 +13,12 @@ app.use(express.json());
 // root index route with some text
 app.get('/', (req,res) => {
     res.send('This is a test API');
-})
+});
 
 
 
 
 
 
-//Listen on port 3000:
-app.listen(3000);
+//Listen on port:
+app.listen(process.env.PORT);
